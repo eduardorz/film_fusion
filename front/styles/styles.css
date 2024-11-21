@@ -1,0 +1,172 @@
+/* General Body Styles */
+body {
+    background-color: rgb(218, 221, 223);
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.8rem; /* Cambiado a rem para escalabilidad */
+    font-weight: 800;
+    line-height: 1.5; /* Mejor legibilidad */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    margin: 3rem;
+    margin-bottom: 5rem;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox para mejor alineación */
+    gap: 20px; /* Reemplaza margin-right para consistencia */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s; /* Animación para interacciones */
+}
+
+nav ul li a:hover {
+    color: #555; /* Cambio de color al pasar el mouse */
+}
+
+/* Main and Footer Styling */
+main, footer {
+    margin: 1rem; /* Cambiado a rem */
+    padding: 1rem;
+}
+
+footer {
+    text-align: center;
+    font-weight: bold; /* 'font-style: bold' no es válido */
+}
+
+/* Movie Card Styling */
+.divMovie {
+    height: auto; /* Altura dinámica */
+    width: 400px;
+    background-color: rgb(0, 0, 0);
+    margin: 10px;
+    padding: 10px 5px; /* Mayor separación interna */
+    color: antiquewhite;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 calc(33.33% - 40px); /* Tres elementos por fila */
+}
+
+.divMovie:hover {
+    transform: scale(1.05); /* Efecto hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.divMovie img {
+    max-height: 400px;
+    max-width: 300px;
+    margin-bottom: 20px; /* Menor separación */
+    border-radius: 10px; /* Redondeo de esquinas */
+}
+
+/* Featured Movies Section */
+.featuredMovies {
+    display: flex;
+    align-items: center;
+    margin: 100px;
+    padding: 25px;
+    background-color: black;
+    color: antiquewhite;
+    border-radius: 30px;
+    gap: 50px; /* Consistencia con otros espacios */
+}
+
+.featuredMovies img {
+    max-width: 500px;
+    max-height: 350px;
+    border-radius: 10px;
+}
+
+/* Titles */
+#featuredMoviesTitle {
+    font-size: 4rem;
+    margin-left: 2rem;
+}
+
+#filmFusion {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    margin-right: 20rem;
+}
+
+/* Slogan */
+#slogan {
+    font-size: 4.5rem;
+    margin-left: 2rem;
+}
+
+/* Containers */
+#container {
+    margin: 30px auto; /* Centrado automático */
+    padding: 1rem;
+    background-color: rgb(117, 113, 113);
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaciado entre elementos */
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Biography Section */
+#bioEdu {
+    margin: 0;
+    padding: 150px;
+    display: flex;
+    align-items: center;
+    gap: 60px; /* Espaciado entre elementos */
+}
+
+#bioEdu img {
+    width: 500px;
+    height: auto;
+    border-radius: 15px; /* Mejor diseño */
+}
+
+/* Inputs */
+input[name="genre[]"] {
+    margin: 0;
+    margin-right: 3px;
+    padding: 5px; /* Mejor apariencia */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .divMovie {
+        width: 100%; /* Ajusta al tamaño del dispositivo */
+        margin: 10px auto;
+    }
+
+    .featuredMovies {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #bioEdu {
+        flex-direction: column;
+        gap: 20px;
+        padding: 50px;
+    }
+
+    #bioEdu img {
+        width: 100%;
+    }
+}
